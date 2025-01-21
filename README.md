@@ -33,7 +33,7 @@ graph TD
 
 ```
 
-### Business Client Flow 
+### Initial Business Client Flow 
 
 ```mermaid
 graph TD
