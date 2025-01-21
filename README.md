@@ -1,11 +1,10 @@
-# Architecture of services
+# Architecture of Services
 
 ## High-Level Overview of the System
 
-### Initial view from Business Owner
+### Initial View from Business Owner
 
-```mermai
-
+```mermaid
 graph TD
     subgraph Server-App [Server Application - Backend]
         DB[(Database)]
@@ -30,10 +29,17 @@ graph TD
     BC -->|Provide Services & Products| DB
     EMP -->|Perform Services| DB
     CUST -->|Request Services| DB
-
 ```
 
-### Initial Business Client Flow 
+**Description**: This chart provides a high-level view of the system's architecture. It highlights the roles and their primary actions:
+- **BusinessOwner** defines categories, approves/declines organization masters, and invites BusinessClients.
+- **BusinessClient** provides services and products stored in the backend.
+- **Employee** performs assigned services by customers.
+- **Customer** requests services, initiating interactions with the backend.
+
+---
+
+### Initial Business Client Flow
 
 ```mermaid
 graph TD
@@ -59,14 +65,19 @@ graph TD
     end
 ```
 
-### Editing High‐Level B2B Application Relationship Flow without Time Engine
+**Description**: This chart outlines the initial flow for Business Clients:
+- Onboarding starts with an invitation email.
+- Business Clients add organization units, select or request approval for areas of service, and manage services and sub-services.
+- Cost bearers and customers are managed, and customers are assigned to employees.
+
+---
+
+### High-Level B2B Application Relationship Flow (Without Time-Engine Functionality)
 
 ```mermaid
-
 graph TD
-%% Restyled B2B Application Relationship Flow (Without Time-Engine Functionality) 
-%% Applications
-    %% Applications
+%% Restyled B2B Application Relationship Flow (Without Time-Engine Functionality)
+
     subgraph PlatformApp [Platform Application - Frontend]
         BC[BusinessClient]
     end
@@ -111,17 +122,21 @@ graph TD
     Notifications -->|Notify Employee| EMP
     Notifications -->|Notify Customer| CUST
     EMP -->|View Assigned Gigs| Gigs
-
 ```
 
-### Restyled B2B Application Relationship Flow (With Time-Engine Functionality)
+**Description**: This chart shows the B2B application flow without the Time-Engine:
+- Customers submit order intents.
+- Business Clients manually schedule gigs and assign them to tours.
+- Notifications ensure communication between customers, Business Clients, and employees.
+
+---
+
+### High-Level B2B Application Relationship Flow (With Time-Engine Functionality)
 
 ```mermaid
-
 graph TD
-    %% High-Level B2B Application Relationship Flow
+%% High-Level B2B Application Relationship Flow
 
-    %% Applications
     subgraph PlatformApp [Platform Application - Frontend]
         BC[BusinessClient]
     end
@@ -171,6 +186,10 @@ graph TD
     Notifications -->|Notify Employee| EMP
     Notifications -->|Notify Customer| CUST
     EMP -->|View Assigned Gigs| Gigs
-
-
 ```
+
+**Description**: This chart integrates the Time-Engine functionality for automated scheduling:
+- Time-Engine provides scheduling options to customers.
+- Customers select their preferred option, and gigs are automatically scheduled and assigned.
+- Notifications ensure smooth communication.
+
