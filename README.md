@@ -1,4 +1,4 @@
-# architecture-of-binschonda-services
+# Architecture of services
 
 ## High-Level Overview of the System
 
