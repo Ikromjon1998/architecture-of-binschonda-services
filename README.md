@@ -57,6 +57,7 @@ graph TD
         BCPlatform -->|Manage Customers| Customers[Customer Management]
         Customers -->|Assign to Employees| EMP
     end
+```
 
 ### Editing High‐Level B2B Application Relationship Flow without Time Engine
 
